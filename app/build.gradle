@@ -8,7 +8,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'com.soasta.touchtest'
+/*apply plugin: 'com.soasta.touchtest'*/
 
 repositories {
     jcenter()

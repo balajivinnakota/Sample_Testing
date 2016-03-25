@@ -29,8 +29,6 @@
             android:name=".Options"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar"/>
-    
-        <service android:name="com.soasta.android.touchtest.TouchTestService" android:enabled="true" android:exported="false" />
         </application>
 
     <intent-filter>

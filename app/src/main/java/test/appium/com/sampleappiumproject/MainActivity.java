@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(username.getText().toString().equalsIgnoreCase("winbold") && password.getText().toString().equalsIgnoreCase("Winbold123")){
+                if(username.getText().toString().equalsIgnoreCase("username") && password.getText().toString().equalsIgnoreCase("password")){
                     startActivity(new Intent(MainActivity.this, Options.class));
                 }
                 else{
