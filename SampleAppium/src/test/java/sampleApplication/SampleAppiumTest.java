@@ -23,6 +23,7 @@ public class SampleAppiumTest {
 		File appDir = new File(classpathRoot, "../../App/build/outputs/apk/App-greenhouseandroid-debug.apk");
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
+		
 		capabilities.setCapability("browserName", "");
 		capabilities.setCapability("deviceName", "Android Emulator");
 		
