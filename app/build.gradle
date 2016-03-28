@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.1'
+
+        //Add the following line
+        classpath 'com.soasta.touchtest:touchtest-plugin:1.4.0'
+
+    }
+
+    configurations.all{
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+/*apply plugin: 'com.soasta.touchtest'*/
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "test.appium.com.sampleappiumproject"
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.soasta.touchtest:touchtestdriver:1.4.0'
+}
