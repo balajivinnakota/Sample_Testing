@@ -38,8 +38,8 @@ public class SampleAppiumTest {
 	@Test
 	public void testUI() throws InterruptedException{
 		
-		driver.findElement(By.id("username")).sendKeys("winbold");
-		driver.findElement(By.id("password")).sendKeys("Winbold123");
+		driver.findElement(By.id("username")).sendKeys("username");
+		driver.findElement(By.id("password")).sendKeys("password");
 		driver.hideKeyboard();
 		driver.findElement(By.id("submit")).click();
 		Thread.sleep(3000);
