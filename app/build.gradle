@@ -2,22 +2,26 @@ buildscript {
     repositories {
         jcenter()
     }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+
+        //Add the following line
+        classpath 'com.soasta.touchtest:touchtest-plugin:1.4.0'
+
+    }
+
     configurations.all{
         resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
 }
 
 apply plugin: 'com.android.application'
+
 /*apply plugin: 'com.soasta.touchtest'*/
 
 repositories {
     jcenter()
-}
-
-configurations{
-    compile
-    runtime
-    soasta
 }
 
 android {
@@ -42,7 +46,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.9.5"
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
-    soasta 'com.soasta.touchtest:touchtestdriver:1.0'
+    compile 'com.soasta.touchtest:touchtestdriver:1.4.0'
+    androidTestCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+    compile project(':appium_test')
 }
